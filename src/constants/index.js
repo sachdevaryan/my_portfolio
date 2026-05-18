@@ -32,7 +32,7 @@ export const myProjects = [
       "Created a React + TailwindCSS frontend featuring a chat interface and PDF viewer with citation-based navigation.",
       "Implemented citation grounding so every response references the exact passage from the source document.",
     ],
-    href: "",
+    href: "https://github.com/sachdevaryan/rag-system",
     logo: "",
     image: "/assets/projects/rag-assistant.jpg",
     tags: [
