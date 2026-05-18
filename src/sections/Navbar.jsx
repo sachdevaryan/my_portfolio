@@ -16,6 +16,9 @@ function Navigation(){
         <li className="nav-li">
             <a className="nav-link" href="#contact">Contact</a>
         </li>
+        <li className="nav-li">
+            <a className="nav-link" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </li>
     </ul>
     );
 }
