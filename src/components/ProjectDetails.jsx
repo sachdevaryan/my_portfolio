@@ -21,7 +21,20 @@ const ProjectDetails = ({
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        {Array.isArray(image) ? (
+          <div className="grid grid-cols-2 gap-4 p-4 bg-midnight/40 rounded-t-2xl">
+            {image.map((imgSrc, index) => (
+              <img
+                key={index}
+                src={imgSrc}
+                alt={`${title} screenshot ${index + 1}`}
+                className="w-full object-contain max-h-[300px] rounded-lg mx-auto"
+              />
+            ))}
+          </div>
+        ) : (
+          <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        )}
         <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
@@ -40,7 +53,7 @@ const ProjectDetails = ({
               ))}
             </div>
             {href && (
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open(href, '_blank', 'noopener,noreferrer');
